@@ -53,6 +53,12 @@ namespace DreamScene2
             toolStripMenuItem25.Checked = _settings.AutoPause3;
             toolStripMenuItem26.Checked = _settings.DisableWebSecurity;
             toolStripMenuItem27.Checked = _settings.DesktopInteraction;
+
+            string extPath = Helper.ExtPath();
+            if (!Directory.Exists(extPath))
+            {
+                Directory.CreateDirectory(extPath);
+            }
         }
 
 
